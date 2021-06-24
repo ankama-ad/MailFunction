@@ -73,8 +73,8 @@ namespace MailFunction
                     // alternateView.LinkedResources.Add(imageToInline);
 
                     message.IsBodyHtml = true;                   
-                    message.To.Add("saikrishna.kusuma@amnetdigital.com");
-                    message.To.Add("anudeep.kappakanti@amnetdigital.com");
+                    //message.To.Add("saikrishna.kusuma@amnetdigital.com");
+                    //message.To.Add("anudeep.kappakanti@amnetdigital.com");
                     ContentType c = new ContentType("image/jpeg");
                     Console.WriteLine("stream");
                     Console.WriteLine(Convert.ToBase64String(memStream.ToArray()));

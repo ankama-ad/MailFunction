@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\ankam\\Documents\\demo\\MailFunction\\MailFunction.csproj": {}
+    "C:\\Users\\ankam\\Documents\\demo\\MailFunction\\MailFunction.csproj": {}
   },
   "projects": {
-    "c:\\Users\\ankam\\Documents\\demo\\MailFunction\\MailFunction.csproj": {
+    "C:\\Users\\ankam\\Documents\\demo\\MailFunction\\MailFunction.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\ankam\\Documents\\demo\\MailFunction\\MailFunction.csproj",
+        "projectUniqueName": "C:\\Users\\ankam\\Documents\\demo\\MailFunction\\MailFunction.csproj",
         "projectName": "MailFunction",
-        "projectPath": "c:\\Users\\ankam\\Documents\\demo\\MailFunction\\MailFunction.csproj",
+        "projectPath": "C:\\Users\\ankam\\Documents\\demo\\MailFunction\\MailFunction.csproj",
         "packagesPath": "C:\\Users\\ankam\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\ankam\\Documents\\demo\\MailFunction\\obj\\",
+        "outputPath": "C:\\Users\\ankam\\Documents\\demo\\MailFunction\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ankam\\AppData\\Roaming\\NuGet\\NuGet.Config",
