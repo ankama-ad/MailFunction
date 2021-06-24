@@ -1,29 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "/home/anks/Documents/demo/MailFunction/MailFunction.csproj": {}
+    "c:\\Users\\ankam\\Documents\\demo\\MailFunction\\MailFunction.csproj": {}
   },
   "projects": {
-    "/home/anks/Documents/demo/MailFunction/MailFunction.csproj": {
+    "c:\\Users\\ankam\\Documents\\demo\\MailFunction\\MailFunction.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/anks/Documents/demo/MailFunction/MailFunction.csproj",
+        "projectUniqueName": "c:\\Users\\ankam\\Documents\\demo\\MailFunction\\MailFunction.csproj",
         "projectName": "MailFunction",
-        "projectPath": "/home/anks/Documents/demo/MailFunction/MailFunction.csproj",
-        "packagesPath": "/home/anks/.nuget/packages/",
-        "outputPath": "/home/anks/Documents/demo/MailFunction/obj/",
+        "projectPath": "c:\\Users\\ankam\\Documents\\demo\\MailFunction\\MailFunction.csproj",
+        "packagesPath": "C:\\Users\\ankam\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\ankam\\Documents\\demo\\MailFunction\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/anks/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\ankam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -35,6 +38,17 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "IronPdf": {
+              "target": "Package",
+              "version": "[2021.3.1, )"
+            },
+            "PuppeteerSharp": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -50,7 +64,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.408/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
