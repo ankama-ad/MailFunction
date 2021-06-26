@@ -12,14 +12,14 @@ namespace MailFunction
     {
         static async Task Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+           
             // IronPdf.HtmlToPdf Renderer = new IronPdf.HtmlToPdf();
             try
             {
 
-                // var accessToken = 'H4sIAAAAAAAEACWWxQ7tyBVF_-VNHclMkXpgZl8zzcxsXzO08u-5nYzrqKSzamvt-vuPlT7DnBZ__v1H3cpVS7ZA2Vf-esxpZJgUOsUbeLTVvXQA6GU4Y47aL3ug8BnBgD0N8SwBCS0XAHyHgweXTIUtaaOmO4vVt5wqf8sL_OagowuKjiPnt6wGeDmJIZpiX4wA-cN2WHuWltJPTodDUHB5j2G42zwZUEj7-RhyjYmSfd7SJYL1dkPxEY37iDO2X-QUYX9JgBTfJIGgp5xJZdNeSSEEeL-LJDAfAajzvwtBTOiw3hdXvuZeFMVJ9KJ5Fbg_SsExcg2V8JcQeaNKAcr-_QgjK543gJ7CwHZrSB4MMEPrEfW8qOZA1baslvrtvmCsjyvXJBFTVdkMor7N_dFIJBBDALUkGUAYpPugu6oGd0NTEpsvvUT695jajwJF-DLOn48VwxQ0D1lAQ3gBj3oribN56BEVgEE3KFf0RGz_FHaeQWYsZ2qrbi5DD5-pRwUMixXBo0ceGUfM4PPpfMvx01k7HUME6ToExmwj3KlwX-oYkd8lkwb6ApWITDjTttmiGIQCIH5wTGK2hwOvQMYK8qvwpsatlfw5R6DstljCVySX9Y1d2evYTp5wnXUBTecLhr_kAErIUTIVClnMUZ8n32aK56unL6DOmxYjXK8brDv-nfEkHLrlOx42vWDQytD9AQ7ZV-d0jjSazS8Cxq8mO-RX8jHeuNSIRGr4EO60lKGuCzEuG62z7QCYzMiBLGYMqJ7BN36a-UpnQTtcJsXMbaU7qIEzNARo5wHyN1RPzRJiPjoLFxD0PSwvaVZBulJA3GRRRACrxplyY-smWwFmH4awQVqmpEg3mTJ8ulZ3zlKffZdE0bdsSTry7AgXD6E6ck4-qy2Z-3dq7VWrNeVUQaaeR7Mb-vW4399zL_mguo--8ujkR6orJRUyqTjFopTIdRz8th3yjpYQEZFi2hcB1op12qldm_PdUJaOejD5sUcba0qMWrSbJpswPR-UDXga_fjCHOUX6lhkZAwe5LdXhFiuRg-Zqk5Cf2sI28y-YX-vmM1SiS93HifHpH5SN0LJ1VQ82Xu-W4ROgizRpCp8-CsyDMDibhrsnO-Yih2tpvK17gtOqYOcnzHWIpAq1i8jX8gyHQ1xQ7tJhEDrKSXW5zfIYtrctaoE4Le4Ot8YWHe5wI75Oi9ageVv5206Uy6Dd-3W4-WqFhnFdG64FBeZOl1dE3ZLo4fzJSA73NagrhkztHkUfpJ9rIHg0J6juco4mt6KtwMfkRAlYhxvA6SwAk6D2sYIOJNMxwFsdgg1ldf6FTfgEItYTiaszVU7VYY-jaSLlu4xRjjNxw0vWtLgCP012RH4YqaVk-tNDOYZBqw7QB1Aj8cQBsyGWSCj6sTDDZg-DacevUagwfEq35l-qANU7w1kPOiM30JiXsl1X713mZCFfvgXfp73pFeqeiEZVamTbYsmRLYQZ-vWiayiAVEAYlb3SR9hCvb8dxnTLNOpoGPtZ3ZauigwpXJS697CZ6tTPdfBasFBPcgCm1YgFvEh3NXbc7cvbHBZs72lcybKYg9cxpgpnJePKEmNcpeVO0486AFNXaAx82a-WLvUaqChR_uxwRgK825Z7ohVThmO7GCpMeanL6zXIs-CYBjRjYC5JKoh-y3--o7DE5Z1b9mIC-lkv34somjswDOdlXJa8manDgMYxiNf2fcTwOU1QMRSfb4bjcacYBw8hZ0leHkYatWut7_r1DCjO7IQjYR8qebSgsudQmz2-UOuzZachfJvyyB23tCb0KMo9eSlXerTkTBu12-qUKROJUicm3mjzQ0SAwwBq8-Lt93NWaiU9gkZhnpj9XWW-d2RcBng0JN0Mgm9_CrM09QvsWd7yIPgRJLf2c_d98INVoLhSoUP9AzErOtb379knK8wWXRUXQqnpnByoDuQfl5i3RaA1SoRANAPycI1ZkywSyj4BZPOGLg6qPBIbAvVV6iJRNMxjSA-1Aptfqu8H2nBqO0aEDqX96jPamDfXG3QjiOP93TBwa8z5sv9bYS9DILV3dlLYagYKlRplH4CX5bMmVhvGGBZEXKbzZ-WKfrZ_CiNZOQ_XUNS3ZEEHAuPw1vcsNkehfC2xdFc34Myv7fuil9FPFxXGyBzBZGLAYN32kXOGOAN4e_l6SiUzwZpY4W2fErrQKGDmuVKbBBg5afAzxFP5z0Cctz-6bLlMzuLtjaA7Ej94BQ8HJzyViG0SuCNoLM4XL_-wjcuZIgxKZ3UpV1AXPj4kN1VT4Do1MzT0dblSozN1lLTuYDfeD2urSq7pJZewwflz6qM7frw5Bqb2atRjiGPaC3C66nBtoiueFENU34tY_tLQXkxWt9NxqDCymcr3iEgsDmXh0yAUE8RP5skv8JbWKc6AAlv50AOgDvemcq1WlpM5Hj1U68Jz2dfe68iiYclGT5TfMwajEINoYjltv_668-__nDr891nrXx-36yYIgKbqIgeDC8PUp0wKEYzdiqYAlVEl6edhOPgZdyDjCtUWRdo1jUBVoBgrGuXt49TD4kkwsmSAeXkn05CPZ6mnKRRbIEzdUDu07VEi-zEN0HZyK1jd4ATO7Vzpl17w0_lNrolmLUmT53HKwXiC4v8s2PwQwdKqroORxi8qh4w0-Nsw4O3PGdi52bQHi4LUpLjksT3zcKkyYhH1tl5Z1QB0QNRTpUoPnPZSeaF4pZpIXDzwlce06oD83aaF5ec3fbX5E0E3TtbpVhVMzz8xHrdX1t-4R9D5hfeEsNPoy4uyyFRMFjSzNfRQnQ1cKs9GLfYCAZ10LoP8Hl-JVEWW71l1_8xP9-mXJXgRxkdcAzRtQ_JPp4Zu8qFQo3C_G_Kbesp3Y-1_I1dgnDxts-yG0ggPMVeJuB0vb1xUgRx7WrEYl9uDS7cRvoKxMITW60n0TSJmbnnUvJLSJcMFXQhzWWYVd2xX4si27VLxGlfOe5IKvY7T7kreEZuHkRR1yo2DbmXhdjoRBj13rKIIQtfVW8uXArgV_jE7n12vMoAECaWmyeq5rziNjFQ6wgSp_n-6ux13fpEPuIJBJfIKJViQlT9GjfLTMFwEMhtpemqRCezzS7rk5FrPmuveEAsg48gYvsEFF_wtoFvyiepNVO6pQlCWyxbW7gfJK10f4qDBH_wCy5_5y5WnEnpwR51kw9y7iL6oqQt1SpJO9y2dxovIE2BpLh7fI8P9A_m__wX48Rb4VoMAAA=.eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly9XQUJJLVVTLU5PUlRILUNFTlRSQUwtcmVkaXJlY3QuYW5hbHlzaXMud2luZG93cy5uZXQiLCJlbWJlZEZlYXR1cmVzIjp7Im1vZGVybkVtYmVkIjpmYWxzZX19';
-                // var embedUrl = 'https://app.powerbi.com/reportEmbed?reportId=f6bfd646-b718-44dc-a378-b73e6b528204&groupId=be8908da-da25-452e-b220-163f52476cdd&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly9XQUJJLVVTLU5PUlRILUNFTlRSQUwtcmVkaXJlY3QuYW5hbHlzaXMud2luZG93cy5uZXQiLCJlbWJlZEZlYXR1cmVzIjp7Im1vZGVybkVtYmVkIjp0cnVlLCJjZXJ0aWZpZWRUZWxlbWV0cnlFbWJlZCI6dHJ1ZX19';
-                // var reportId = 'f6bfd646-b718-44dc-a378-b73e6b528204';
+                var accessToken = "H4sIAAAAAAAEACWWtQ70CBKE3-VPfZKZTtrANOYxY2ZmZq_u3W9Wm3fQ_XWpqv7-YyZPPyX5n__-adsIyvumEESll5936yU6pKZPXocfplRsEZWeroHUqZvGoPV6zjQyeOCjku4xarlnCYKjo5ZeV5qfqTikVR_bugeGkXLFDuE5KnPowHkwmb5VnVGOSYfVO8qtLCDG2UIwMLHqqbdRwFfPteKE3QfVZ1S6Lm6NjIHPnNQ4UjGvQMjT3mTFV2N6k8uuzva0sGn8mV8k4jKGELHIT8BcVqjJb9gR8qPDEKaQvk_CtgwV7HZux0B59F3XbR9Y4NJIkQQYkRfsKMVKHzXTGZZsnqNb5UwoVCpeZJw3FZwhZbh4wY4YqHDsIjyCO-_U6ZqZJ-sW3fMMSwff-OMID0dHgAuFwgJ4320qWjzyeWzrpGiwLMSPi3YjkAgM2gPoOv9soVbfCj0-R0LqsREW4ETlEauHg7t1bO5c0xx2W719sIqXYfn8QjAxg5zp5nDD7hqVqwAJXi8dspimxmF4kMkh3igdeYNPIBw4OsG0v8bZXxjaH6jgvp8iDsmwRpzoxqnduPnquvgUJBFlF-6da0OSoE5bJCiCf0-LrKMo1RwLYENusYQ-0pVLNnKgk3iVdYi5KrII3XYdMMcM3gMvm5fAptc-VtdBZRNFG4AkhS-WdzaZBcwqfxvNaGMK5Bgq2kktDrcT3UQfPHdTcZbN6D7fxQW6itJTN2Bf4szobK2aZFKPNDlDzpmCxzEZLY_LgqULXdwnPSeORlK-8ANeIznFhqFJW9DVdnNndXpvTfHtCDrgFQbhFF8fj_IGJAp2Wna8E-gDDSYgZaxt90gEqSxdu6ckWnwD2Vv-TSj_tPCLksGo1xQMZmDoHjOIUeRe0v24FBTjdCCHhQPMxYbHFjINpziF3JoyuRPatj8Q7p4wt2QHGwcoDwPk9VT8zSLBXZRpSVUDwV3VXeHGmsakukVbQ28t_mEuEdFO2gkse71vWCxfLZbShTZWqwWR7gOBmAQGYx_rohiM9ndOJ2nCXZAo2OURjry1BaRDNclwbfVb8fOp4VYiStBrTVXVlMQBd24COR22ZBHMONK3BEha_F6eV8cCgR6925FRM4v4NfSbKvbnjV-HzPXDJhzGQX-nrFivvvRbihIqSvWfCC9CYWnETqM-uuvFtq9wnHcf7jQSxmCwsqwh-R0y7gZmdaMsS6eZix2sqefHHnOzUluabFE1kXJEwnrdXnbKpfm9JZMrPh8EjFKoCHgxFaMluhSMI608sCGEcvYj3jcudU4tEazrsnaxHMvY9I43ptUMwROJaTsIXG-Iom8tdSwz65l8Ux-3S8qn9TmTfh91bZZ3eTlqKdNijepxEjloqtmEDqu9JLEVkA8CAXy5SHabRj7ic6Fk-DquxAGxjd0UEG9S-_IrM5KFeuxIARN2hstCjNW3kzMjTAj0kwYFNx47fnRxExlE439DvqksIzc4DUhD4xu6EZKwrZ3Gh745EMReDM8HMLXGXz-VgBLH4aa80kJaERpA6dXO2xTjuCUPnQ48S8uef98eidAgATAq0i_fyKZj1ACMcNXNkBxZgJD1wVPgIexAko8nj5eeaTysbswYre3uVNeMOCmp7CYh1aaKDxnTkEh5YxR_NZmI3LE4dAljmgBHAihAFqTmB9V2Jbk_-Aisytczmp8YA5buF6k7vSrA9JVbOIX46l4OEahj8-c9c-Edmb1AGVX_e_ir54wVZ5N1CgNQanhASv17RbH1Vk02Jcrp0LFBSOO9zM-o8exqThBoroI_qUl8SHhU4YNW_7zAICyUBRxSLWFH3DU2TtMVzO_u0qRrr2YQMmDB9q7LTrJsfavnFeEKLusmh-yuCBFUnagZn2_alPWDWfxr_6DZHB7cvpKBpuG5lPsJewKcFjOQS62b-lGJfIMtiFuMl4u_8EdRnqlO0L0Sca7xTMsLAI_Bh_mUxihCis66CswbQrruv7wlI4un3oLgdYVG9bS3bRPTGI0dcUw8pHVvnoi_-KzmKMxW_1gSTMQT319Swb2TIVmD1foOjQcmd20u1BFzNJnSOSplX_EX9VtdT2vP8b6pDXOl7n63Rr3fVlq_HF2kZXOYmtryX27cJvegdN5HfTOCSqB_ucGqt-nNx5ofYRrhAUAg7Ets92iSXHMzh43Tx2GriRakFjiTsxU6huFGZ3haBpi_jKBs2H7DhU_yKbekZDQr2yBu-iihBHbVzpPCx3Aitn-xfY0lIa2xycg6_rGPZe4ghLx3wQT0S3EOU42ezv7SAJ3JR0Mqm3DWgNfE7OhHsrroYvmU9V5XWXJeOvpgAJlIpOaX4ldxBd0n8VNhcXN3DH5D1V3psSxVo29-T4KeNemdYcjSUfBjPoFPI4fv9CkVTgUZoic9VMXPyvQCtjnKNN8XerFMWWcIVjQN40M6wnoSHp5Z6W37sTCnnc24v3-O1PCbYuacPiTIWOyEWRy5ePWXkehNpyF7LyV23zQ4KWkmg9_F9uc_f7j1mfdJLZ5fHdNa5ddzJmkGFHdQjIu1iFPOw62v09Nu1bHt3MiioYUytfgJ46t_fjrR1bI7HqNgol8k6ck6atXKH4TjhcEwSN76O2jzCj7fjAaQ8k_luiCb0g5XKx7-c-_UcB0vk_wKDLEa183qDGZoIwbXvjVkhL0Cm2E3JpzX12uVXxvcPxxxIUiN_QjDbZnHBeune09DEocEKwE_vgkCd7HZEdMxeHylwl-3M6qM1Qh98JQAQyMraskBnqhDfdHHuK-a4ygis3WCPqLWkEekFS5dF-3KDZ3C2_F4inibnWgVKGk9ll1h-bRFLWRj2nGK55gXa8pZA78pzr5Ozn-wwiwTyzCLz9Nl1V9__YP5metilf0fZRnodyIZWx571GVwPoPul-2_U05Tjcl-rMVvrE6WH9_ZzMO4C5w6tQ92vdCHmosDqNoeUZeJSZ3npaWLPx18Z743K8N76dwcxQ4gFQgLctlw1Xe5eVAYfRMuHS_Ph-YfnadEL18tdlg8DrgkZkB1H3iAgCzbQb798hTBNrphgg9xFVT6b8fLQ3u8N5-eiPet-yPVzzxmJi0GBY87LEQ9iyNQUaO31gi92gF-fgBU0SqN4jqTjSuQ4ypmE-4UYuynOZsPZJLysp2Toc9Gm9vuBXMOgPyJQtCYySotxUO2iqIVOiCD0ypH_JNHsu7BTy40sfGzrtZ-fjUxKGZg5SKt-SXlHY-O1Krio3uCcIy53KjgQ0IvX6tT9Nuxuhzmh_l__wcRIchVggwAAA==.eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly9XQUJJLVVTLU5PUlRILUNFTlRSQUwtcmVkaXJlY3QuYW5hbHlzaXMud2luZG93cy5uZXQiLCJlbWJlZEZlYXR1cmVzIjp7Im1vZGVybkVtYmVkIjpmYWxzZX19";
+                var embedUrl = "https://app.powerbi.com/reportEmbed?reportId=f6bfd646-b718-44dc-a378-b73e6b528204&groupId=be8908da-da25-452e-b220-163f52476cdd&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly9XQUJJLVVTLU5PUlRILUNFTlRSQUwtcmVkaXJlY3QuYW5hbHlzaXMud2luZG93cy5uZXQiLCJlbWJlZEZlYXR1cmVzIjp7Im1vZGVybkVtYmVkIjp0cnVlLCJjZXJ0aWZpZWRUZWxlbWV0cnlFbWJlZCI6dHJ1ZX19";
+                var reportId = "f6bfd646-b718-44dc-a378-b73e6b528204";
                 //Renderer.PrintOptions.RenderDelay = 5000;
                 //Renderer.PrintOptions.EnableJavaScript = true;
                 //Renderer.RenderUrlAsPdf("http://localhost:4200/#/login").SaveAs("../../../url.pdf");
@@ -46,15 +46,16 @@ namespace MailFunction
                 var navOptions = new NavigationOptions() { Timeout = 30000, WaitUntil = new WaitUntilNavigation[] { WaitUntilNavigation.Networkidle2 } };
                              
                // await page.EmulateMediaTypeAsync(PuppeteerSharp.Media.MediaType.Screen);
-            string _html;
-            using (var reader = new StreamReader("./index.html")){
-            _html = reader.ReadToEnd();
-            }
-                // await page.SetContentAsync(_html);
-                //Path.DirectorySeparatorChar = '/';
-                // Path.AltDirectorySeparatorChar = '/';
-                var path = new Uri(Path.GetFullPath("./index.html"));
-                await page.GoToAsync(path.AbsoluteUri);
+            // string _html;
+            // using (var reader = new StreamReader("./index.html")){
+            // _html = reader.ReadToEnd();
+            // }
+            //     // await page.SetContentAsync(_html);
+            //     //Path.DirectorySeparatorChar = '/';
+            //     // Path.AltDirectorySeparatorChar = '/';
+            //     var path = new Uri(Path.GetFullPath("./index.html"));
+                var path = await GetFilePath(reportId, accessToken, embedUrl);
+                await page.GoToAsync(path);
                 //var watchDog = page.WaitForFunctionAsync(" () => window.reportRendered");
                 
                 // var pdfContent = await page.PdfStreamAsync(new PdfOptions
@@ -98,9 +99,9 @@ namespace MailFunction
                     // alternateView.LinkedResources.Add(imageToInline);
 
                     message.IsBodyHtml = true;
-                    message.To.Add("kalidasu.surada@amnetdigital.com");
-                    message.To.Add("saikrishna.kusuma@amnetdigital.com");
-                    message.To.Add("anudeep.kappakanti@amnetdigital.com");
+                    //message.To.Add("kalidasu.surada@amnetdigital.com");
+                    //message.To.Add("saikrishna.kusuma@amnetdigital.com");
+                    //message.To.Add("anudeep.kappakanti@amnetdigital.com");
                     ContentType c = new ContentType("image/jpeg");
                     Console.WriteLine("stream");
                     Console.WriteLine(Convert.ToBase64String(memStream.ToArray()));
@@ -208,6 +209,24 @@ namespace MailFunction
             System.Text.StringBuilder sbText = new System.Text.StringBuilder(Image, Image.Length);
             sbText.Replace("\r\n", string.Empty); sbText.Replace(" ", string.Empty);
             return sbText.ToString();
+        }
+
+        public static async Task<string> GetFilePath(string reportId, string accessToken, string embedUrl){
+                                  
+               // await page.EmulateMediaTypeAsync(PuppeteerSharp.Media.MediaType.Screen);
+            string html;
+            using (var reader = new StreamReader("./index.html")){
+            html = reader.ReadToEnd();
+            }
+                // await page.SetContentAsync(_html);
+                //Path.DirectorySeparatorChar = '/';
+                // Path.AltDirectorySeparatorChar = '/';
+            html = html.Replace(":accessToken", accessToken);
+            html =  html.Replace(":embedUrl", embedUrl);
+            html = html.Replace(":reportId", reportId);
+            var guid = Guid.NewGuid();
+            await File.WriteAllTextAsync( guid +".html", html); 
+            return new Uri(Path.GetFullPath("./" + guid +".html" )).AbsoluteUri;
         }
     }
 }
