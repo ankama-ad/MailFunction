@@ -12,9 +12,6 @@ namespace AppOwnsData.Services
     using System.Linq;
     using System.Security;
     using System.Threading.Tasks;
-    using Microsoft.Extensions.Configuration.FileExtensions;
-    using Microsoft.Extensions.Configuration.Json;
-    using Microsoft.Extensions.Configuration;
     public class AadService
     {
         private static IConfigurationRoot configuration = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build();

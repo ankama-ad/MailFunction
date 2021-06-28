@@ -6,6 +6,7 @@
 let models = window['powerbi-client'].models
 let reportContainer = $('#report-container').get(0)
 
+
 // Initialize iframe for embedding report
 powerbi.bootstrap(reportContainer, { type: 'report' })
 
@@ -45,7 +46,7 @@ report.off('loaded')
 
 // Triggers when a report schema is successfully loaded
 report.on('loaded', function () {
-  console.log('Report load successful')
+  console.log('Report load successful') 
 })
 
 // Clear any other rendered handler events
