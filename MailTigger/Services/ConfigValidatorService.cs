@@ -5,22 +5,22 @@
 
 namespace AppOwnsData.Services
 {
-    using Microsoft.Extensions.Configuration; 
+    using Microsoft.Extensions.Configuration;
     using System;
     using System.Configuration;
     using System.IO;
 
     public class ConfigValidatorService
     {
-        private static IConfigurationRoot configuration = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("appsettings.json").Build();
-        public static readonly string ApplicationId = configuration["applicationId"];
-        public static readonly Guid WorkspaceId = GetParamGuid(configuration["workspaceId"]);
-        public static readonly Guid ReportId = GetParamGuid(configuration["reportId"]);
-        public static readonly string AuthenticationType = configuration["authenticationType"];
-        public static readonly string ApplicationSecret = configuration["applicationSecret"];
-        public static readonly string Tenant = configuration["tenant"];
-        public static readonly string Username = configuration["pbiUsername"];
-        public static readonly string Password = configuration["pbiPassword"];
+        //private static IConfigurationRoot configuration = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("appsettings.json").Build();
+        public static readonly string ApplicationId = Environment.GetEnvironmentVariable("applicationId");
+        public static readonly Guid WorkspaceId = GetParamGuid(Environment.GetEnvironmentVariable("workspaceId"));
+        public static readonly Guid ReportId = GetParamGuid(Environment.GetEnvironmentVariable("reportId"));
+        public static readonly string AuthenticationType = Environment.GetEnvironmentVariable("authenticationType");
+        public static readonly string ApplicationSecret = Environment.GetEnvironmentVariable("applicationSecret");
+        public static readonly string Tenant = Environment.GetEnvironmentVariable("tenant");
+        public static readonly string Username = Environment.GetEnvironmentVariable("pbiUsername");
+        public static readonly string Password = Environment.GetEnvironmentVariable("pbiPassword");
 
         /// <summary>
         /// Check if web.config embed parameters have valid values.

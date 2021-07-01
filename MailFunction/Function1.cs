@@ -1,4 +1,11 @@
-﻿using System;
+// Default URL for triggering event grid function in the local environment.
+// http://localhost:7071/runtime/webhooks/EventGrid?functionName={functionname}
+using System;
+using Microsoft.Azure.WebJobs;
+using Microsoft.Azure.WebJobs.Host;
+using Microsoft.Azure.EventGrid.Models;
+using Microsoft.Azure.WebJobs.Extensions.EventGrid;
+using Microsoft.Extensions.Logging;
 using System.Threading.Tasks;
 using PuppeteerSharp;
 using System.Net.Mail;
@@ -8,39 +15,18 @@ using AppOwnsData.Services;
 using ERP.Data.Services;
 using ERP.Data.Subscriptions;
 using MailFunction.Services;
-using System.Linq;
-using System.Text.Json;
-using System.Collections.Generic;
 
-namespace Main
+namespace MailFunction
 {
-
-    public class SubscriptionDataModel
+    public static class Function1
     {
-        public int ReportSubscriptionId { get; set; }
-        public string ReportId { get; set; }
-        public string WorkspaceId { get; set; }
-
-        public string Email { get; set; }
-        public int? UseridEmail { get; set; }
-        public string Frequency { get; set; }
-        public string Weekday { get; set; }
-        public string DateOfMonth { get; set; }
-        public TimeSpan? SheduledTime { get; set; }
-        public DateTime? StartDate { get; set; }
-        public DateTime? EndDate { get; set; }
-    }
-    class Program
-    {
-        static async Task Main(string[] args)
+        [FunctionName("Function1")]
+        public static async Task Run([EventGridTrigger]EventGridEvent eventGridEvent, ILogger log)
         {
-            
+            log.LogInformation(eventGridEvent.Data.ToString());
             try
             {
-
-                var listsring = "[{\"ReportSubscriptionId\":0,\"ReportId\":\"7779d348-1f55-4527-8594-4b1dcb9e7364\",\"WorkspaceId\":\"a5ebd5be-6706-4bcc-b342-1d0771af780c\",\"Email\":\"ajay@powerbiaxes.onmicrosoft.com\",\"UseridEmail\":7,\"Frequency\":null,\"Weekday\":null,\"DateOfMonth\":null,\"SheduledTime\":null,\"StartDate\":null,\"EndDate\":null},{\"ReportSubscriptionId\":0,\"ReportId\":\"f75d4ca3-9020-4c7a-90e0-3946ae90d564\",\"WorkspaceId\":\"4c8870bb-dd4d-4055-8be6-e09d11802a46\",\"Email\":\"ajay@powerbiaxes.onmicrosoft.com\",\"UseridEmail\":7,\"Frequency\":null,\"Weekday\":null,\"DateOfMonth\":null,\"SheduledTime\":null,\"StartDate\":null,\"EndDate\":null},{\"ReportSubscriptionId\":0,\"ReportId\":\"a2e10dc8-4302-4ec2-9471-33f5470dda7a\",\"WorkspaceId\":\"0a4344d7-c25c-40fa-8bdd-4359a7d30216\",\"Email\":\"ajay@powerbiaxes.onmicrosoft.com\",\"UseridEmail\":7,\"Frequency\":null,\"Weekday\":null,\"DateOfMonth\":null,\"SheduledTime\":null,\"StartDate\":null,\"EndDate\":null},{\"ReportSubscriptionId\":0,\"ReportId\":\"7248a900-c98f-4d8e-956f-ad1177432804\",\"WorkspaceId\":\"27d60dc0-5c5e-4559-ba25-25b47ab85633\",\"Email\":\"ajay@powerbiaxes.onmicrosoft.com\",\"UseridEmail\":7,\"Frequency\":null,\"Weekday\":null,\"DateOfMonth\":null,\"SheduledTime\":null,\"StartDate\":null,\"EndDate\":null}]";
-                 var list = JsonSerializer.Deserialize<List<SubscriptionDataModel>>(listsring);
-                var subscriptionsByuser = list.GroupBy(c => c.ReportId).ToList();
+                var subscriptionsByuser = new SusbscriptionService().GetReportSubscriptions();
 
 
                 foreach (var subs in subscriptionsByuser)
@@ -67,7 +53,7 @@ namespace Main
         private static async Task SendMailForUser(SubscriptionDataModel subscription)
         {
 
-            var embedResult = await EmbedService.GetEmbedParams( Guid.Parse(subscription.WorkspaceId), Guid.Parse(subscription.ReportId));
+            var embedResult = await EmbedService.GetEmbedParams(Guid.Parse(subscription.WorkspaceId), Guid.Parse(subscription.ReportId));
 
 
             var accessToken = embedResult.EmbedToken.Token;
@@ -240,7 +226,7 @@ namespace Main
 
                 // SmtpClient smtpClient = new SmtpClient();
                 // smtpClient.Send(mailMessage);
-               
+
 
             }
 

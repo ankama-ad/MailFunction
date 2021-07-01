@@ -5,7 +5,8 @@
 
 namespace AppOwnsData.Services
 {
-    using Microsoft.Extensions.Configuration; 
+    using Microsoft.Extensions.Configuration;
+    using Microsoft.IdentityModel.Protocols;
     using System;
     using System.Configuration;
     using System.IO;

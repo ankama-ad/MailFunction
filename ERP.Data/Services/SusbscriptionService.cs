@@ -15,22 +15,42 @@ namespace ERP.Data.Services
             this.dbcontext = new ERPContext();
         }
 
-        public List<IGrouping<int?, SubscriptionDataModel>> GetReportSubscriptions()
+
+        public List<SubscriptionDataModel> GetReportSubscriptions()
         {
 
-           return (from s in dbcontext.ReportSubscriptions
-                         join r in dbcontext.Reports
-                         on s.ReportId equals r.Id
-                         join user in dbcontext.Users on s.UseridEmail equals user.UserId
-                         select new SubscriptionDataModel() {
-                             WorkspaceId = r.PbiWorkspaceId,
-                             ReportId = r.PbiReportId,
-                             Email = user.Email,
-                             UseridEmail =  s.UseridEmail
-                         }
-                         ).ToList().GroupBy(c => c.UseridEmail).Select(grp => grp).ToList();
+            return (from s in dbcontext.ReportSubscriptions
+                    join r in dbcontext.Reports
+                    on s.ReportId equals r.Id
+                    join user in dbcontext.Users on s.UseridEmail equals user.UserId
+                    select new SubscriptionDataModel()
+                    {
+                        WorkspaceId = r.PbiWorkspaceId,
+                        ReportId = r.PbiReportId,
+                        Email = user.Email,
+                        UseridEmail = s.UseridEmail
+                    }
+                    ).ToList();
 
-           // return this.dbcontext.ReportSubscriptions.Where(c => c.IsActive).ToList();
+            // return this.dbcontext.ReportSubscriptions.Where(c => c.IsActive).ToList();
         }
+
+        //public List<IGrouping<int?, SubscriptionDataModel>> GetReportSubscriptions()
+        //{
+
+        //   return (from s in dbcontext.ReportSubscriptions
+        //                 join r in dbcontext.Reports
+        //                 on s.ReportId equals r.Id
+        //                 join user in dbcontext.Users on s.UseridEmail equals user.UserId
+        //                 select new SubscriptionDataModel() {
+        //                     WorkspaceId = r.PbiWorkspaceId,
+        //                     ReportId = r.PbiReportId,
+        //                     Email = user.Email,
+        //                     UseridEmail =  s.UseridEmail
+        //                 }
+        //                 ).ToList().GroupBy(c => c.UseridEmail).Select(grp => grp).ToList();
+
+        //   // return this.dbcontext.ReportSubscriptions.Where(c => c.IsActive).ToList();
+        //}
     }
 }

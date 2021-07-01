@@ -1,20 +1,27 @@
-﻿using System;
+using System;
+using System.IO;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Azure.WebJobs;
+using Microsoft.Azure.WebJobs.Extensions.Http;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
+using System.Linq;
 using PuppeteerSharp;
 using System.Net.Mail;
-using System.IO;
 using System.Net.Mime;
 using AppOwnsData.Services;
-using ERP.Data.Services;
-using ERP.Data.Subscriptions;
-using MailFunction.Services;
-using System.Linq;
 using System.Text.Json;
 using System.Collections.Generic;
+//using ERP.Data.Services;
+//using ERP.Data.Subscriptions;
+using MailFunction.Services;
+using System.Collections.Generic;
+using Microsoft.Azure.Functions.Worker;
 
-namespace Main
+namespace MailTigger
 {
-
     public class SubscriptionDataModel
     {
         public int ReportSubscriptionId { get; set; }
@@ -30,17 +37,34 @@ namespace Main
         public DateTime? StartDate { get; set; }
         public DateTime? EndDate { get; set; }
     }
-    class Program
+
+    public static class Function1
     {
-        static async Task Main(string[] args)
+        [Function("Function1")]
+        public static async Task<IActionResult> Run(
+            [Microsoft.Azure.Functions.Worker.HttpTrigger(Microsoft.Azure.Functions.Worker.AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest req,
+            ILogger log)
         {
-            
+            log.LogInformation("C# HTTP trigger function processed a request.");
+
+            string name = req.Query["name"];
+
+            string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
+            dynamic data = JsonConvert.DeserializeObject(requestBody);
+            name = name ?? data?.name;
+
+            string responseMessage = string.IsNullOrEmpty(name)
+                ? "This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response."
+                : $"Hello, {name}. This HTTP triggered function executed successfully.";
+
+            // return new OkObjectResult(responseMessage);
             try
             {
+                //// var subscriptionsByuser = new List<IGrouping<int?, SubscriptionDataModel>>(); 
 
                 var listsring = "[{\"ReportSubscriptionId\":0,\"ReportId\":\"7779d348-1f55-4527-8594-4b1dcb9e7364\",\"WorkspaceId\":\"a5ebd5be-6706-4bcc-b342-1d0771af780c\",\"Email\":\"ajay@powerbiaxes.onmicrosoft.com\",\"UseridEmail\":7,\"Frequency\":null,\"Weekday\":null,\"DateOfMonth\":null,\"SheduledTime\":null,\"StartDate\":null,\"EndDate\":null},{\"ReportSubscriptionId\":0,\"ReportId\":\"f75d4ca3-9020-4c7a-90e0-3946ae90d564\",\"WorkspaceId\":\"4c8870bb-dd4d-4055-8be6-e09d11802a46\",\"Email\":\"ajay@powerbiaxes.onmicrosoft.com\",\"UseridEmail\":7,\"Frequency\":null,\"Weekday\":null,\"DateOfMonth\":null,\"SheduledTime\":null,\"StartDate\":null,\"EndDate\":null},{\"ReportSubscriptionId\":0,\"ReportId\":\"a2e10dc8-4302-4ec2-9471-33f5470dda7a\",\"WorkspaceId\":\"0a4344d7-c25c-40fa-8bdd-4359a7d30216\",\"Email\":\"ajay@powerbiaxes.onmicrosoft.com\",\"UseridEmail\":7,\"Frequency\":null,\"Weekday\":null,\"DateOfMonth\":null,\"SheduledTime\":null,\"StartDate\":null,\"EndDate\":null},{\"ReportSubscriptionId\":0,\"ReportId\":\"7248a900-c98f-4d8e-956f-ad1177432804\",\"WorkspaceId\":\"27d60dc0-5c5e-4559-ba25-25b47ab85633\",\"Email\":\"ajay@powerbiaxes.onmicrosoft.com\",\"UseridEmail\":7,\"Frequency\":null,\"Weekday\":null,\"DateOfMonth\":null,\"SheduledTime\":null,\"StartDate\":null,\"EndDate\":null}]";
-                 var list = JsonSerializer.Deserialize<List<SubscriptionDataModel>>(listsring);
-                var subscriptionsByuser = list.GroupBy(c => c.ReportId).ToList();
+                 var list = System.Text.Json.JsonSerializer.Deserialize<List<SubscriptionDataModel>>(listsring);
+                var subscriptionsByuser = list.GroupBy(c => c.UseridEmail).ToList();
 
 
                 foreach (var subs in subscriptionsByuser)
@@ -58,16 +82,17 @@ namespace Main
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.Message);
+                // Console.WriteLine(e.Message);
+                return new OkObjectResult(e.Message);
             }
-
-            Console.WriteLine("End");
+            return new OkObjectResult(responseMessage);
+            // Console.WriteLine("End");
         }
 
         private static async Task SendMailForUser(SubscriptionDataModel subscription)
         {
 
-            var embedResult = await EmbedService.GetEmbedParams( Guid.Parse(subscription.WorkspaceId), Guid.Parse(subscription.ReportId));
+            var embedResult = await EmbedService.GetEmbedParams(Guid.Parse(subscription.WorkspaceId), Guid.Parse(subscription.ReportId));
 
 
             var accessToken = embedResult.EmbedToken.Token;
@@ -240,7 +265,7 @@ namespace Main
 
                 // SmtpClient smtpClient = new SmtpClient();
                 // smtpClient.Send(mailMessage);
-               
+
 
             }
 
