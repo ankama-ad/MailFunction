@@ -1,0 +1,127 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <AzureFunctionsVersion>v3</AzureFunctionsVersion>
+    <OutputType>Exe</OutputType>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include=".local-chromium\Win64-848005\chrome-win\MEIPreload\manifest.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".local-chromium\Win64-848005\chrome-win\90.0.4403.0.manifest" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\chrome.dll" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\chrome.exe" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\chrome_100_percent.pak" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\chrome_200_percent.pak" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\chrome_elf.dll" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\chrome_proxy.exe" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\chrome_pwa_launcher.exe" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\D3DCompiler_47.dll" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\elevation_service.exe" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\eventlog_provider.dll" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\First Run" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\icudtl.dat" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\interactive_ui_tests.exe" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\libEGL.dll" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\libGLESv2.dll" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\locales\ar.pak" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\locales\bg.pak" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\locales\bn.pak" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\locales\ca.pak" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\locales\cs.pak" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\locales\da.pak" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\locales\de.pak" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\locales\el.pak" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\locales\en-GB.pak" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\locales\en-US.pak" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\locales\es-419.pak" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\locales\es.pak" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\locales\et.pak" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\locales\fi.pak" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\locales\fil.pak" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\locales\fr.pak" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\locales\gu.pak" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\locales\he.pak" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\locales\hi.pak" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\locales\hr.pak" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\locales\hu.pak" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\locales\id.pak" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\locales\it.pak" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\locales\ja.pak" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\locales\kn.pak" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\locales\ko.pak" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\locales\lt.pak" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\locales\lv.pak" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\locales\ml.pak" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\locales\mr.pak" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\locales\ms.pak" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\locales\nb.pak" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\locales\nl.pak" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\locales\pl.pak" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\locales\pt-BR.pak" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\locales\pt-PT.pak" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\locales\ro.pak" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\locales\ru.pak" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\locales\sk.pak" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\locales\sl.pak" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\locales\sr.pak" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\locales\sv.pak" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\locales\ta.pak" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\locales\te.pak" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\locales\th.pak" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\locales\tr.pak" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\locales\uk.pak" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\locales\vi.pak" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\locales\zh-CN.pak" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\locales\zh-TW.pak" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\MEIPreload\preloaded_data.pb" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\mojo_core.dll" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\nacl_irt_x86_64.nexe" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\notification_helper.exe" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\resources.pak" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\swiftshader\libEGL.dll" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\swiftshader\libGLESv2.dll" />
+    <None Include=".local-chromium\Win64-848005\chrome-win\v8_context_snapshot.bin" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Azure.Functions.Worker.Extensions.Http" Version="3.0.12" />
+    <PackageReference Include="Microsoft.Azure.Functions.Worker.Sdk" Version="1.0.3" OutputItemType="Analyzer" />
+    <PackageReference Include="Microsoft.Azure.Functions.Worker" Version="1.1.0" />
+    <PackageReference Include="Microsoft.Identity.Client" Version="4.33.0" />
+    <PackageReference Include="Microsoft.PowerBI.Api" Version="3.26.0" />
+    <PackageReference Include="PuppeteerSharp" Version="4.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ContentWithTargetPath Include=".local-chromium\**">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>%(RecursiveDir)\%(Filename)%(Extension)</TargetPath>
+    </ContentWithTargetPath>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="css\index.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="host.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="index.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="js\index.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="js\jquery.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="js\powerbi.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="local.settings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ERP.Data\ERP.Data.csproj" />
+  </ItemGroup>
+</Project>

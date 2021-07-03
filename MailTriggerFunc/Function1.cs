@@ -63,7 +63,7 @@ namespace MailTriggerFunc
                 Console.WriteLine(e.Message);
             }
 
-            Console.WriteLine("End");
+            // Console.WriteLine("End");
 
             return new OkObjectResult(responseMessage);
         }
@@ -73,7 +73,7 @@ namespace MailTriggerFunc
         {
 
             var embedResult = await EmbedService.GetEmbedParams(Guid.Parse(subscription.WorkspaceId), Guid.Parse(subscription.ReportId));
-
+            Console.WriteLine("Embed token recieved");
 
             var accessToken = embedResult.EmbedToken.Token;
             var embedUrl = embedResult.EmbedReports[0].EmbedUrl;
@@ -158,7 +158,7 @@ namespace MailTriggerFunc
                 // alternateView.LinkedResources.Add(imageToInline);
 
                 message.IsBodyHtml = true;
-                // message.To.Add("kalidasu.surada@amnetdigital.com");
+                message.To.Add("kalidasu.surada@amnetdigital.com");
                 //message.To.Add("kalidasu.surada@amnetdigital.com");
                 message.To.Add("Halika.aluru@amnetdigital.com");
                 message.To.Add("anudeep.kappakanti@amnetdigital.com");
@@ -199,7 +199,7 @@ namespace MailTriggerFunc
                     File.Delete(path);
                     //File.Delete(subscription.ReportId + ".jpeg");
 
-                    Console.WriteLine("File deleted : " + path);
+                    // Console.WriteLine("File deleted : " + path);
                 }
 
 

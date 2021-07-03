@@ -15,7 +15,8 @@ namespace Function
             // #if DEBUG
             //             Debugger.Launch();
             // #endif
-            var host = new HostBuilder()                
+            var host = new HostBuilder()
+                .ConfigureFunctionsWorkerDefaults()                
                 .ConfigureServices(s =>
                 {
 

@@ -1,9 +1,11 @@
 ﻿using ERP.Data.Contex;
 using ERP.Data.Subscriptions;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace ERP.Data.Services
 {
@@ -16,10 +18,10 @@ namespace ERP.Data.Services
         }
 
 
-        public List<SubscriptionDataModel> GetReportSubscriptions()
+        public async Task<List<SubscriptionDataModel>> GetReportSubscriptions()
         {
 
-            return (from s in dbcontext.ReportSubscriptions
+            var list =  (from s in dbcontext.ReportSubscriptions
                     join r in dbcontext.Reports
                     on s.ReportId equals r.Id
                     join user in dbcontext.Users on s.UseridEmail equals user.UserId
@@ -29,8 +31,9 @@ namespace ERP.Data.Services
                         ReportId = r.PbiReportId,
                         Email = user.Email,
                         UseridEmail = s.UseridEmail
-                    }
-                    ).ToList();
+                    });
+            return await list.ToListAsync();        
+                  
 
             // return this.dbcontext.ReportSubscriptions.Where(c => c.IsActive).ToList();
         }
